@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aka.studios.shribalaji.activity.OtpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/otpLin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/noInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                app:lottie_rawRes="@raw/for_verification"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:text="OTP Verification"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+            <TextView
+                android:id="@+id/showMobileTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="@string/otp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textAlignment="center"
+                android:textColor="#aaaaaa"/>
+
+            <TextView
+                android:id="@+id/invalidOTPTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#FF1100"
+                android:layout_gravity="center"
+                android:layout_marginTop="55dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/otp1"
+                    android:layout_width="0dp"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:backgroundTint="#000000"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+
+                <EditText
+                    android:id="@+id/otp2"
+                    android:layout_width="0dp"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:backgroundTint="#000000"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+
+                <EditText
+                    android:id="@+id/otp3"
+                    android:layout_width="0dp"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:backgroundTint="#000000"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+
+                <EditText
+                    android:id="@+id/otp4"
+                    android:layout_width="0dp"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:backgroundTint="#000000"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+
+                <EditText
+                    android:id="@+id/otp5"
+                    android:layout_width="0dp"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:backgroundTint="#000000"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+
+                <EditText
+                    android:id="@+id/otp6"
+                    android:layout_width="0dp"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:backgroundTint="#000000"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/verifyBtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="@string/verifyBtn"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:background="@drawable/red_bg"/>
+
+        </LinearLayout>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/loadingImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gif_loading"
+            android:background="#FFFFFF"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</ScrollView>

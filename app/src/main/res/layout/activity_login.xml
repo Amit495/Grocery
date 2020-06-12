@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aka.studios.shribalaji.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            app:lottie_rawRes="@raw/for_verification"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="OTP Verification"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/one_time_pass"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#aaaaaa"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Mobile Number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#aaaaaa"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"/>
+
+        <Spinner
+            android:id="@+id/phoneCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginTop="15dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:ccp_textSize="18sp"
+                android:gravity="center"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="false"
+                app:ccp_showFlag="false"
+                app:ccp_showPhoneCode="true"/>
+
+            <EditText
+                android:id="@+id/mobileEditText"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:backgroundTint="#000000"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="10"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/generateOtp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="GET OTP"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:background="@drawable/red_bg"/>
+
+    </LinearLayout>
+
+</ScrollView>

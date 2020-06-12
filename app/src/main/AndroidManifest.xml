@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="aka.studios.shribalaji">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="@string/app_name"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory"
+        tools:targetApi="p">
+        <activity android:name="aka.studios.shribalaji.activity.ThanksActivity"
+            android:theme="@style/FullScreenTheme"></activity>
+        <activity
+            android:name="aka.studios.shribalaji.activity.OrderDetailsActivity"
+            android:parentActivityName="aka.studios.shribalaji.activity.MyOrdersActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity android:name="aka.studios.shribalaji.activity.ProductDetailActivity" />
+        <activity
+            android:name="aka.studios.shribalaji.SplashActivity"
+            android:theme="@style/FullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="aka.studios.shribalaji.activity.AllCategoryActivity"
+            android:parentActivityName="aka.studios.shribalaji.activity.MainActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.MyOrdersActivity"
+            android:parentActivityName="aka.studios.shribalaji.activity.AccountActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.PaymentActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.ProceedActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.EditAddressActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.AccountActivity"
+            android:parentActivityName="aka.studios.shribalaji.activity.MainActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.AddAddressActivity"
+            android:theme="@style/FullScreenTheme">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="aka.studios.shribalaji.activity.AddressActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.OtpActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.LoginActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.CartActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.ProductActivity"
+            android:parentActivityName="aka.studios.shribalaji.activity.MainActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="aka.studios.shribalaji.activity.MainActivity"
+            android:theme="@style/FullScreenTheme">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <receiver
+            android:name="aka.studios.shribalaji.receiver.NetworkReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner"
+    android:layout_margin="3dp"
+    android:padding="5dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Daal Moong"
+        android:layout_marginStart="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Rs. 500"
+        android:textSize="12sp"
+        android:layout_marginEnd="10dp"
+        tools:ignore="SmallSp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/qtyText"
+        android:layout_below="@id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qty: "
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_below="@id/itemName"
+        android:layout_toEndOf="@+id/qtyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text=" Pin code"
+        android:textSize="12sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/sizeText"
+        android:layout_below="@+id/qtyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit: "
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        tools:ignore="SmallSp"/>
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_below="@+id/qtyText"
+        android:layout_toEndOf="@+id/sizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Full"
+        android:textSize="12sp"
+        tools:ignore="SmallSp" />
+
+</RelativeLayout>

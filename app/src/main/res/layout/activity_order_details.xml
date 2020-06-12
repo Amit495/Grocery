@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true"
+    android:background="#F4F2F2"
+    tools:context="aka.studios.shribalaji.activity.OrderDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ordersToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orders Details"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/ordersToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/orderDetailRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner">
+
+                <TextView
+                    android:id="@+id/orderDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Date"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/orderDate"
+                    android:layout_toEndOf="@+id/orderDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="21 Dec 2019"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/orderIdText"
+                    android:layout_below="@+id/orderDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order#"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/orderId"
+                    android:layout_below="@+id/orderDate"
+                    android:layout_toEndOf="@+id/orderIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1554879155"
+                    android:layout_marginStart="15dp"/>
+
+                <TextView
+                    android:id="@+id/orderTotalText"
+                    android:layout_below="@+id/orderIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Total"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/orderTotal"
+                    android:layout_below="@+id/orderId"
+                    android:layout_toEndOf="@+id/orderTotalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Rs. 1500"
+                    android:layout_marginStart="15dp"/>
+
+                <TextView
+                    android:id="@+id/orderItems"
+                    android:layout_below="@+id/orderId"
+                    android:layout_toEndOf="@+id/orderTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="(5 Items)"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"/>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_below="@+id/orderTotalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F1F1"
+                    android:layout_marginTop="5dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/deliveryDetail"
+                android:layout_below="@+id/orderDetailRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:background="@drawable/round_corner">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Information"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F1F1"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Method"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/paymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="COD"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F1F1"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Address"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        tools:text="Full Name" />
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_toEndOf="@+id/fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Work"
+                        android:textSize="8sp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/type_rectangle"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_below="@id/fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="address"
+                        android:textSize="12sp"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/landmark"
+                        android:layout_below="@id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Landmark"
+                        android:textSize="12sp"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_below="@id/landmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="City"
+                        android:textSize="12sp"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/pincode"
+                        android:layout_below="@id/landmark"
+                        android:layout_toEndOf="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=" Pin code"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/state"
+                        android:layout_below="@id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="State"
+                        android:textSize="12sp"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/mobileText"
+                        android:layout_below="@+id/state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile: "
+                        android:layout_marginStart="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+                    <TextView
+                        android:id="@+id/mobile"
+                        android:layout_below="@+id/state"
+                        android:layout_toEndOf="@+id/mobileText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="+9 1111 111 1111"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shipmentLin"
+                android:layout_below="@+id/deliveryDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:background="#F4F2F2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipment Details"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F1F1"
+                    android:layout_marginTop="5dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/itemsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/shipmentLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Summary"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F1F1"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/proceedItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price Detials (0 items)"
+                    android:padding="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Items Total"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+                    <TextView
+                        android:id="@+id/cartTotal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="Rs. 1500"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="GST"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+                    <TextView
+                        android:id="@+id/gstPrice"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="Rs. 1500"
+                        android:gravity="end"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Shipping Charges"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+                    <TextView
+                        android:id="@+id/shippingPrice"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="Rs. 1500"
+                        android:gravity="end"
+                        android:textColor="#009688"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EFEDED"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="Rs. 1500"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EFEDED"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/itemsProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/noOrdersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Results Found"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

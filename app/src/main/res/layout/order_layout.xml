@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner"
+    android:layout_margin="3dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/orderDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Date"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/orderDate"
+        android:layout_toEndOf="@+id/orderDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="21 Dec 2019"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/orderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Pending"
+        android:textSize="10sp"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/green_rectangle"/>
+
+    <TextView
+        android:id="@+id/orderIdText"
+        android:layout_below="@+id/orderDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order#"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/orderId"
+        android:layout_below="@+id/orderDate"
+        android:layout_toEndOf="@+id/orderIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1554879155"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/orderTotalText"
+        android:layout_below="@+id/orderIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Total"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/orderTotal"
+        android:layout_below="@+id/orderId"
+        android:layout_toEndOf="@+id/orderTotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Rs. 1500"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/orderItems"
+        android:layout_below="@+id/orderId"
+        android:layout_toEndOf="@+id/orderTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="(5 Items)"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/orderTotalText"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F3F1F1"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/viewItems"
+        android:layout_below="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View items"
+        android:textColor="#000000"
+        android:padding="10dp"/>
+
+    <ImageView
+        android:layout_below="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_right"
+        android:padding="10dp"
+        android:layout_alignParentEnd="true"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/viewItems"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F3F1F1"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

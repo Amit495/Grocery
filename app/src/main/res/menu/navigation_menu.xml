@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/account"
+        android:title="My Account"
+        android:icon="@drawable/ic_man"/>
+
+    <item
+        android:id="@+id/order"
+        android:title="Orders"
+        android:icon="@drawable/ic_order"/>
+
+    <item
+        android:id="@+id/addressBook"
+        android:title="Address Book"
+        android:icon="@drawable/ic_address"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About Us"
+        android:icon="@drawable/ic_about"/>
+
+    <item
+        android:id="@+id/contact"
+        android:title="Contact Us"
+        android:icon="@drawable/ic_contact"/>
+
+    <item
+        android:id="@+id/terms"
+        android:title="@string/terms_and_condition"
+        android:icon="@drawable/ic_terms"/>
+
+    <item
+        android:id="@+id/privacy"
+        android:title="Privacy Policy"
+        android:icon="@drawable/ic_privacy"/>
+
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/ic_share"/>
+
+</menu>

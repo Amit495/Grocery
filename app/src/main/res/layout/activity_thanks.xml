@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true"
+    tools:context="aka.studios.shribalaji.activity.ThanksActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_tick"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:id="@+id/placeText"
+        android:layout_below="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Placed"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_below="@+id/placeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Rs. 1500"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="65dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/orderIdText"
+        android:layout_below="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order ID: "
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="25dp"/>
+
+    <TextView
+        android:id="@+id/orderId"
+        android:layout_toEndOf="@+id/orderIdText"
+        android:layout_below="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1554545446446 "
+        android:textSize="14sp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/orderDateText"
+        android:layout_below="@+id/orderIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"/>
+
+    <TextView
+        android:id="@+id/orderDate"
+        android:layout_toEndOf="@+id/orderDateText"
+        android:layout_below="@+id/orderIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="20 Dec 2019 "
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"/>
+
+</RelativeLayout>

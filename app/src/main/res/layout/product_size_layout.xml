@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    tools:text="1000 ml"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+    android:gravity="center"
+    android:background="@drawable/select_rectangle"
+    android:id="@+id/productSize"
+    xmlns:tools="http://schemas.android.com/tools">
+
+</TextView>

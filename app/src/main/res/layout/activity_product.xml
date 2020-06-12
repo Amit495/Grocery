@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F2F2"
+    tools:viewBindingIgnore="true"
+    tools:context="aka.studios.shribalaji.activity.ProductActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarProduct"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/productToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/white_rectangle"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchProduct"
+            android:layout_toStartOf="@+id/mainCartBag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:queryHint="Search for products..."
+            app:iconifiedByDefault="false"
+            app:searchIcon="@null"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/mainCartBag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="|"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:drawableEnd="@drawable/ic_bag"
+            android:drawablePadding="5dp"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/badge"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            tools:text="25"
+            android:textSize="8sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/red_circle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:ignore="SmallSp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/notFoundAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/not_found"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/loadingImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gif_loading"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/updateProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

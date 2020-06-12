@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Full Name"
+            android:layout_marginStart="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_toEndOf="@+id/fullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Work"
+            android:textSize="8sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/type_rectangle"
+            tools:ignore="SmallSp" />
+
+        <RadioButton
+            android:id="@+id/selectAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
+
+        <TextView
+            android:id="@+id/landmark"
+            android:layout_below="@id/fullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Landmark"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_below="@id/landmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="City"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/pincode"
+            android:layout_below="@id/landmark"
+            android:layout_toEndOf="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text=" Pin code"
+            android:textSize="12sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/mobileText"
+            android:layout_below="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile: "
+            android:layout_marginStart="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+        <TextView
+            android:id="@+id/mobile"
+            android:layout_below="@+id/city"
+            android:layout_toEndOf="@+id/mobileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="+9 1111 111 1111"
+            android:textSize="12sp"
+            tools:ignore="SmallSp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FBF8F8"
+        android:layout_marginTop="3dp"/>
+
+    <LinearLayout
+        android:id="@+id/editLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/editAddress"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Edit/Change"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/removeAddress"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FBF8F8"/>
+
+</LinearLayout>
